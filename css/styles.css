@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  /*text colors*/
+  --text-red: #ee4248;
+  --text-white: #f8f9fa;
+  --text-light: #f6f6f6;
+  --text-dark: #30444e;
+  --text-dark2: #263238;
+  --text-dark3: #1f2e35;
+  --box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  --bg-red: #ee4248;
+  --bg-gray: #f7f7f7;
+}
+html {
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/******* Icon *******/
+.icon {
+  width: 24px;
+  height: 24px;
+}
+/******* Navbar *******/
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 21px;
+}
+.brand-logo {
+  width: 119px;
+  height: 56px;
+  margin: 0.5rem;
+}
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+}
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: rgba(31, 46, 53, 0.8);
+  font-size: 1.8rem;
+}
+.navbar-links li:hover {
+  background-color: var(--bg-red);
+}
+.navbar-social {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #666;
+  border-radius: 10px;
+}
+/******* Navbar-Responsive *******/
+@media (max-width: 400px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-social {
+    display: none;
+    width: 100%;
+    padding: 25px 5px;
+    justify-content: center;
+  }
+  .navbar-social .icon {
+    width: 14px;
+    height: 14px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .navbar-social.active {
+    display: flex;
+  }
+}
