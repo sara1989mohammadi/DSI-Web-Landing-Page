@@ -10,33 +10,59 @@
     </head>
     <body>
         <!-- @@@@@@@@ Header @@@@@@@@ -->
-        <nav class="navbar">
+        <header class="header">
+            <div class="container">
             <img src="./images/logo.png" class="brand-logo">
-            <a href="#" class="toggle-button">
+            <button class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Client</a></li>
-                    <li><a href="#">Partner</a></li>
+            </button>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu__items"><a href="#">Services</a></li>
+                    <li class="menu__items"><a href="#">Product</a></li>
+                    <li class="menu__items"><a href="#">Technology</a></li>
+                   
+                    <li class="menu__items" data-type="submenu"><a href="#">About</a>
+                        <ul class="menu__submenu" >
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__items"  data-type="submenu"><a href="#">Client</a>
+                    <ul class="menu__submenu">
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu__items"><a href="#">Partner</a></li>                    
                 </ul>
-            </div>
-            <div class="navbar-social">
+                <div class="navbar-social">
+               <button>
                 <svg class="icon">
-                    <use href="images/sprite.svg#mail"></use>
-                </svg><svg class="icon">
-                    <use href="images/sprite.svg#Union"></use>
-                </svg><svg class="icon">
-                    <use href="images/sprite.svg#shuffle"></use>
-                </svg>
-            </div>
-        </nav>
+                    <use href="images/sprite.svg#mail"></use></svg>
+
+               </button>     
+               <button>  </svg><svg class="icon">
+                        <use href="images/sprite.svg#Union"></use>
+                    </svg>
+                </button>
+                <button>
+                <svg class="icon">
+                        <use href="images/sprite.svg#shuffle"></use>
+                    </svg>
+                </button>
+                </div>
+            </nav>
+        </div>
+        </header>
         <script src="./main.js"></script>
     </body>
 </html>
